@@ -15,7 +15,8 @@ public class MergeSortTest {
 
 	@Test
 	public void test() {
-		MS.sortBU();
+		for (int i = 0; i < 1000000; i++)
+			MS.sort();
 	}
 
 }

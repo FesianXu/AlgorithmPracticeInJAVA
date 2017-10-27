@@ -72,13 +72,13 @@ public class MergeSort {
 		// 适合用链表实现，可以用CPP去尝试
 		int len = raw.length;
 		aux = new int[len];
-		show(raw);
+//		show(raw);
 		for (int size = 1; size < len; size = 2*size){ // the size of the sub-arrays
 			for (int ind = 0; ind < len-size; ind += 2*size){
 				merge(raw, ind, ind+size-1, Math.min(len-1, ind+2*size-1));
 			}
 		}
-		show(raw);
+//		show(raw);
 		
 	}
 	
