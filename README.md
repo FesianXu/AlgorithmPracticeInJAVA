@@ -1,7 +1,7 @@
 # THE PRACTICE OF ALGORITHM EDITION 4 IN JAVA
 ![java]
 
-It is the practice of the textbook **ALGORITHM edition 4**[^1] implement of JAVA.
+It is the practice of the textbook **ALGORITHM edition 4** implement of JAVA.
 
 Including:
 1. Sort
@@ -16,4 +16,3 @@ Including:
 [java]: ./resource/imgs/java.png
 [algorithm]: ./resource/imgs/algorithm.jpg
 
-[^1]: The textbook Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne, [click me](The textbook Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne).
