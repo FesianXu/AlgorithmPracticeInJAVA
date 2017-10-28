@@ -14,7 +14,8 @@ public class FastSortTest {
 
 	@Test
 	public void test() {
-		FS.sort();
+		for (int i = 0; i < 10000; i++)
+			FS.sort();
 	}
 
 }

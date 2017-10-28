@@ -3,9 +3,15 @@ package Sort;
 import java.util.Arrays;
 
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class BubbleSort {
-	int[] raw = {5,3,6,8,7,4,1,2,6,41,25,36,74,15,98,74,15,12,32,64};
+	int[] raw = new int[1000] ;
+	public BubbleSort() {
+		for (int i = 0; i < raw.length; i++)
+			raw[i] = i;
+		StdRandom.shuffle(raw);
+	}
 	private void show(int[] raw){
 		StdOut.println(Arrays.toString(raw));
 	}
@@ -15,7 +21,8 @@ public class BubbleSort {
 		g[j] = tmp;
 	}
 	public void sort(){
-		show(raw);
+//		show(raw);
+		StdRandom.shuffle(raw);
 		int m = raw.length;
 		for (int out = 0; out < raw.length-1; out++){
 			m -= 1; // 用于优化效率，后面已经冒泡升序了的序列不用再次排序比较了。
@@ -24,7 +31,7 @@ public class BubbleSort {
 					exch(raw, ind, ind+1);
 			}
 		}
-		show(raw);
+//		show(raw);
 	}
 	
 }

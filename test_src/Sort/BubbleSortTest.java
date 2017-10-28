@@ -13,7 +13,7 @@ public class BubbleSortTest {
 
 	@Test
 	public void test() {
-//		for (int i = 0; i < 1000000; i++)
+		for (int i = 0; i < 10000; i++)
 			BS.sort();
 	}
 

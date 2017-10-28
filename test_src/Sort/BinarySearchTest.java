@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import Sort.BinarySearch;
+import Search.BinarySearch;
 import edu.princeton.cs.algs4.StdOut;
 
 public class BinarySearchTest {

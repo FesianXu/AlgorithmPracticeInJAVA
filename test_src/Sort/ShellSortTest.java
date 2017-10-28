@@ -16,6 +16,7 @@ public class ShellSortTest {
 
 	@Test
 	public void test() {
+		for (int i = 0; i < 1000; i++)
 		SS.sort();
 	}
 

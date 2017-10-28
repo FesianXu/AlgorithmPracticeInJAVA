@@ -3,9 +3,15 @@ package Sort;
 import java.util.Arrays;
 
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class ShellSort {
-	int[] raw = {5,3,6,8,7,4,1,2,6,41,25,36,74,15,98,74,15,12,32,64};
+	int[] raw = new int[1000] ;
+	public ShellSort() {
+		for (int i = 0; i < raw.length; i++)
+			raw[i] = i;
+		StdRandom.shuffle(raw);
+	}
 	
 	private void show(){
 		StdOut.println(Arrays.toString(raw));
@@ -16,7 +22,8 @@ public class ShellSort {
 		g[j] = tmp;
 	}
 	public void sort() {
-		show();
+//		show();
+		StdRandom.shuffle(raw);
 		int len = raw.length;
 		int h = 1;
 		while(h < len/4) h = 4*h+1;
@@ -28,7 +35,7 @@ public class ShellSort {
 			}
 			h = h/4;
 		}
-		show();
+//		show();
 		
 	}
 }

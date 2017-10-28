@@ -3,9 +3,15 @@ package Sort;
 import java.util.Arrays;
 
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class MergeSort {
-	int[] raw = {5,3,6,8,7,4,1,2,6,41,25,36,74,15,98,74,15,12,32,64};
+	int[] raw = new int[1000] ;
+	public MergeSort() {
+		for (int i = 0; i < raw.length; i++)
+			raw[i] = i;
+		StdRandom.shuffle(raw);
+	}
 	int[] aux;
 	private void show(int[] raw){
 		StdOut.println(Arrays.toString(raw));
@@ -28,6 +34,7 @@ public class MergeSort {
 	public void sort(){
 		aux = new int[raw.length];
 //		show(raw);
+		StdRandom.shuffle(raw);
 		sort(raw, 0, raw.length-1);
 //		show(raw);
 	}
@@ -56,7 +63,7 @@ public class MergeSort {
 			return ;
 		}
 		
-		
+	
 		int mid = lo+(hi-lo)/2;
 		sort(a, lo, mid);
 		sort(a, mid+1, hi);	
@@ -72,13 +79,13 @@ public class MergeSort {
 		// 适合用链表实现，可以用CPP去尝试
 		int len = raw.length;
 		aux = new int[len];
-//		show(raw);
+		show(raw);
 		for (int size = 1; size < len; size = 2*size){ // the size of the sub-arrays
 			for (int ind = 0; ind < len-size; ind += 2*size){
 				merge(raw, ind, ind+size-1, Math.min(len-1, ind+2*size-1));
 			}
 		}
-//		show(raw);
+		show(raw);
 		
 	}
 	
